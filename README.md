@@ -19,8 +19,8 @@ To access the latest lottery results through our API, you can generate an API ke
 
 Once you have your API key, you can make a request to our endpoint to retrieve the latest lottery results. Here's an example of how to make a request:
 
-```http
-GET https://resultsZA.co.za/api/get_latest_results?api_key=YOUR_API_KEY
+```
+curl -i "https://resultsZA.co.za/api/get_latest_results?api_key=YOUR_API_KEY"
 ```
 
 Please replace `YOUR_API_KEY` with the key generated above.
@@ -31,30 +31,42 @@ The response will be a JSON object containing the latest draw results, structure
 
 ```json
 {
-    "status": "success",
-    "results": [
-        [
-            "Draw Number",
-            "Game Name",
-            "Day of the Week",
-            "Draw Date (GMT)",
-            "Numbers (Array of drawn numbers)",
-            "Bonus Number (if applicable)"
-        ],
-        
-    ]
-}
-```
-
-### Example response:
-
-```json
-{
-    "status": "success",
-    "results": [
-        [1234,"Sample Game","Monday","Mon, 14 Aug 2000 00:00:00 GMT","[10, 20, 30, 40, 50]", "5"]
-    ]
-}
+            "status": "success",
+            "results": {
+                "daily_lotto_results": {
+                    "date": "Thu, 17 Aug 2023 00:00:00 GMT",
+                    "divisions": [
+                        { "division": "DIV 1", "winners": 2, "winning_amount": "215387.60" },
+                        { "division": "DIV 2", "winners": 366, "winning_amount": "271.10" },
+                        // ...
+                    ],
+                    "draw_id": "1618",
+                    "draw_machine": "RNG2",
+                    "game_type": "Daily Lotto",
+                    "id": 165,
+                    "next_draw_date": "Fri, 18 Aug 2023 00:00:00 GMT",
+                    "total_pool_size": "1211706.80",
+                    "total_sales": "2420085.00",
+                    "winning_numbers": "08, 15, 23, 28, 37"
+                },
+                "lotto_plus1_results": {
+                    // ...
+                },
+                "lotto_plus2_results": {
+                    // ...
+                },
+                "lotto_results": {
+                    // ...
+                },
+                "powerball_plus_results": {
+                    // ...
+                },
+                "powerball_results": {
+                    // ...
+                }
+            },
+            "status": "success"
+        }
 ```
 
 ## Support and Feedback
