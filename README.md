@@ -31,42 +31,97 @@ The response will be a JSON object containing the latest draw results, structure
 
 ```json
 {
-            "status": "success",
-            "results": {
-                "daily_lotto_results": {
-                    "date": "Thu, 17 Aug 2023 00:00:00 GMT",
-                    "divisions": [
-                        { "division": "DIV 1", "winners": 2, "winning_amount": "215387.60" },
-                        { "division": "DIV 2", "winners": 366, "winning_amount": "271.10" },
-                        // ...
-                    ],
-                    "draw_id": "1618",
-                    "draw_machine": "RNG2",
-                    "game_type": "Daily Lotto",
-                    "id": 165,
-                    "next_draw_date": "Fri, 18 Aug 2023 00:00:00 GMT",
-                    "total_pool_size": "1211706.80",
-                    "total_sales": "2420085.00",
-                    "winning_numbers": "08, 15, 23, 28, 37"
+    "status": "success",
+    "results": {
+        "daily_lotto_results": {
+            "date": "Thu, 17 Aug 2023 00:00:00 ",
+            "draw_id": "1618",
+            "draw_machine": "RNG2",
+            "game_type": "Daily Lotto",
+            "total_pool_size": "1211706.80",
+            "total_sales": "2420085.00",
+            "winning_numbers": "01, 02, 11, 17, 32",
+            "bonus_ball": null,
+            "next_draw_date": "Fri, 18 Aug 2023 00:00:00 ",
+            "divisions": [
+                {
+                    "division": "DIV 1",
+                    "winners": 2,
+                    "winning_amount": "215387.60"
                 },
-                "lotto_plus1_results": {
-                    // ...
+                {
+                    "division": "DIV 2",
+                    "winners": 366,
+                    "winning_amount": "271.10"
                 },
-                "lotto_plus2_results": {
-                    // ...
+                {
+                    "division": "DIV 3",
+                    "winners": 10451,
+                    "winning_amount": "19.00"
                 },
-                "lotto_results": {
-                    // ...
-                },
-                "powerball_plus_results": {
-                    // ...
-                },
-                "powerball_results": {
-                    // ...
+                {
+                    "division": "DIV 4",
+                    "winners": 98600,
+                    "winning_amount": "4.90"
                 }
-            },
-            "status": "success"
-        }
+            ]
+        },
+        "lotto_results": {
+            "date": "Wed, 16 Aug 2023 00:00:00 ",
+            "draw_id": "2360",
+            "draw_machine": "RNG2",
+            "game_type": "Lotto",
+            "total_pool_size": "23745477.88",
+            "total_sales": "16667340.00",
+            "winning_numbers": "06, 08, 13, 28, 37, 48",
+            "bonus_ball": 21,
+            "next_draw_date": "Sat, 19 Aug 2023 00:00:00 ",
+            "divisions": [
+                {
+                    "division": "DIV 1",
+                    "winners": "0",
+                    "winning_amount": "0.00"
+                },
+                {
+                    "division": "DIV 2",
+                    "winners": "1",
+                    "winning_amount": "100548.90"
+                },
+                {
+                    "division": "DIV 3",
+                    "winners": "50",
+                    "winning_amount": "3497.40"
+                },
+                {
+                    "division": "DIV 4",
+                    "winners": "140",
+                    "winning_amount": "1561.30"
+                },
+                {
+                    "division": "DIV 5",
+                    "winners": "2519",
+                    "winning_amount": "145.80"
+                },
+                {
+                    "division": "DIV 6",
+                    "winners": "3427",
+                    "winning_amount": "93.20"
+                },
+                {
+                    "division": "DIV 7",
+                    "winners": "48195",
+                    "winning_amount": "50.00"
+                },
+                {
+                    "division": "DIV 8",
+                    "winners": "35943",
+                    "winning_amount": "20.00"
+                }
+            ]
+        },
+    //..
+  }
+}
 ```
 
 ## Support and Feedback
